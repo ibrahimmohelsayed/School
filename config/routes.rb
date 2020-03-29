@@ -20,5 +20,14 @@ Rails.application.routes.draw do
   resources :classrooms
 
   root 'dashboard#index'
+
+  namespace :api do
+    resources :attendances
+    resources :classrooms
+    resources :courses
+    resources :exam_categories
+    resources :exams
+
+  end
   
 end
